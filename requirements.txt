@@ -1,0 +1,11 @@
+# Direct runtime dependencies identified from exported Python imports.
+# Reproducible clean-machine installation has not yet been verified.
+joblib
+numpy
+opencv-python
+Pillow
+pywebview
+rapidocr-onnxruntime
+onnxruntime
+scikit-learn
+pokerkit==0.7.4

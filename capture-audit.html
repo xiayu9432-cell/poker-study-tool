@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>采集审核台</title><link rel="stylesheet" href="capture-audit.css"></head>
+<body><main>
+<header><div><small>采集板块</small><h1>采集审核台</h1></div><div><b id="version">--</b><span id="status">正在连接</span></div></header>
+<section class="gate"><strong id="gateState">等待采集</strong><span id="gateReason">尚未取得精算输入</span></section>
+<section class="table-section"><h2>牌桌基本信息</h2><div id="tableCards" class="card-grid"></div></section>
+<section class="decision-section"><h2>精算所需数据</h2><div id="decisionCards" class="card-grid"></div></section>
+<section class="players-section"><h2>玩家信息与数据统计</h2><div id="playerCards" class="player-grid"></div></section>
+<section class="actions-section"><h2>本手完整行动记录</h2><div id="actionCards" class="action-grid"></div></section>
+<section class="peek-section"><h2>偷偷看与摊牌真值</h2><div id="peekCards" class="card-grid"><article class="data-card pending"><b>等待识别</b><strong>本手尚无公开底牌</strong><span>只记录手动打开后出现的信息</span></article></div></section>
+</main><script src="capture-audit.js"></script></body></html>

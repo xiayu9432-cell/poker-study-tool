@@ -1,0 +1,12 @@
+{
+  "name": "poker-study-tool",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Experimental poker study source snapshot with an offline demo",
+  "license": "UNLICENSED",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "demo": "node examples/offline-demo.js",
+    "test": "node scripts/check.js"
+  }
+}

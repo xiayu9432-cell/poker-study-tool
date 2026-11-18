@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>我的范围</title><link rel="stylesheet" href="hero-profile.css"></head>
+<body><main>
+<header><div><small>范围审计</small><h1>我的范围</h1></div><div class="header-actions"><button id="profileTopmost">置顶</button><div><b id="heroName">尚未采集本人资料</b><span id="capturedAt">--</span></div></div></header>
+<section><div class="matrix-title"><h2>当前牌局范围条件</h2><span>自动同步</span></div><div id="strategyScenario" class="scenario-summary"><span>等待翻牌前牌局数据</span></div></section>
+<section id="captureStatus" class="status">打开本人资料弹窗后会自动识别并更新；不需要在审核台手动确认座位5。</section>
+<div class="range-columns">
+<section class="matrix-section"><div class="matrix-title"><h2>当前场景起手范围</h2><span id="strategySummary">等待实时牌局</span></div><div class="legend"><i class="raise"></i>加注 <i class="call"></i>跟注 <i class="check"></i>让牌 <i class="fold"></i>弃牌 <i class="math"></i>条件动作</div><div id="strategyMatrix" class="matrix"></div><div id="rangeDetail" class="range-detail">点击任意手牌格查看当前场景下的基础动作和理由</div><p id="strategyContext"></p></section>
+  <section class="matrix-section"><div class="matrix-title"><h2>本人实际入池范围</h2><span id="historySummary">169类 / 1326组合</span></div><div class="history-toolbar"><button data-view="all" class="selected">全部</button><button data-view="early">前位</button><button data-view="middle">中位</button><button data-view="late">后位</button><button data-view="blinds">盲位</button><button id="enteredOnly">只看已入池</button><button id="clearRange">清空</button><button id="startRange">开始统计</button></div><div id="historyMatrix" class="matrix"></div><p>每格显示“实际入池次数/发到次数”。颜色按预设样本层级逐步增强；灰色不代表应该弃牌。</p></section>
+</div>
+<details><summary>本人平台数据与长期调整提示</summary><div id="statistics" class="statistics"></div><div id="observations" class="observations"></div></details>
+<details open><summary>我的策略漏洞</summary><div class="history-toolbar"><span id="leakSummary">正在统计</span><button id="clearLeaks">清空漏洞样本</button></div><div id="strategyLeaks" class="leaks"></div></details>
+</main><script src="preflop-participation.js"></script><script src="poker-core.js"></script><script src="hero-range-model.js"></script><script src="hero-profile.js"></script></body></html>

@@ -1,0 +1,56 @@
+:root{color-scheme:dark;--bg:#080d0b;--panel:#131d18;--line:#2c3e35;--green:#35d477;--blue:#2d9cff;--red:#d95a5a;--yellow:#ffe46b;--muted:#9bada4}
+*{box-sizing:border-box}
+html{height:100%}
+body{min-height:100%;margin:0;overflow-y:auto;background:var(--bg);color:#f4f8f5;font-family:"Microsoft YaHei",sans-serif}
+main{max-width:1600px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center}
+header h1{margin:2px 0 10px}
+header small,h2{color:#6bed9f}
+.header-actions{display:flex;align-items:center;gap:10px;text-align:right}
+.header-actions span{display:block;color:var(--muted);font-size:12px}
+.history-toolbar{display:flex;flex-wrap:wrap;gap:7px;align-items:end}
+label{display:grid;gap:4px;color:var(--muted);font-size:11px}
+button,select{padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:#18261f;color:#fff}
+button{cursor:pointer}
+button.selected{border-color:var(--green);background:#1d3c2d}
+.status,section,details{margin-top:9px;padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--panel)}
+.status{color:var(--yellow)}
+.range-columns{display:grid;grid-template-columns:minmax(0,1fr);gap:9px}
+.matrix-title{display:flex;justify-content:space-between;align-items:center}
+.matrix-title h2{margin:0 0 8px;font-size:16px}
+.matrix-title span,.matrix-section p{color:var(--muted);font-size:12px}
+.matrix{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:3px;margin-top:7px}
+.hand{min-width:0;min-height:42px;padding:4px 2px;border:1px solid #25342d;border-radius:5px;background:#101612;text-align:center;overflow:hidden}
+.hand b{display:block;font-size:12px}
+.hand span{font-size:9px;color:#d9e6df}
+.hand.raise{background:#205c38;border-color:var(--green)}
+.hand.call{background:#174a71;border-color:var(--blue)}
+.hand.check{background:#45401b;border-color:var(--yellow)}
+.hand.fold{background:#442626;border-color:#7f4545}
+.hand.math{background:#30363a;border-color:#8c9aa3}
+.hand.math span:after{content:'条件动作';font-size:12px}
+.hand.unknown{opacity:.38}
+.hand.history-active{background:rgba(81,226,137,calc(.08 + var(--rate)*var(--sample-weight)*.82));border-color:rgba(53,212,119,calc(.25 + var(--sample-weight)*.75))}
+.scenario-summary{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px;color:#d9e8df;font-size:13px}.scenario-summary b{color:#fff}.scenario-summary span{padding:5px 9px;border:1px solid #29463a;border-radius:6px;background:#102019}.range-detail{min-height:42px;margin-top:10px;padding:9px 11px;border:1px solid #29463a;border-radius:7px;background:#0d1914;color:#d9e8df;font-size:13px;line-height:1.55}.range-detail strong{color:#fff}.hand{cursor:pointer}.hand span{font-size:0}.hand.raise span:after{content:'加注';font-size:12px}.hand.call span:after{content:'跟注';font-size:12px}.hand.check span:after{content:'让牌';font-size:12px}.hand.fold span:after{content:'弃牌';font-size:12px}.hand.unknown span:after{content:'无法计算';font-size:12px}.hand.current-hand{box-shadow:0 0 0 2px #ffe56b,0 0 16px rgba(255,229,107,.55)}
+.hand.current-hand{position:relative;z-index:1;animation:current-hand-pulse .85s ease-in-out infinite alternate;outline:3px solid #fff36b;outline-offset:1px;box-shadow:0 0 10px 4px rgba(255,229,72,.8)}
+@keyframes current-hand-pulse{from{filter:brightness(1);transform:scale(1)}to{filter:brightness(1.65);transform:scale(1.045)}}
+.hand.hidden{visibility:hidden}
+.legend{font-size:11px;color:var(--muted)}
+.legend i{display:inline-block;width:9px;height:9px;margin:0 3px 0 9px;border-radius:2px}
+.legend .raise{background:var(--green)}
+.legend .call{background:var(--blue)}
+.legend .check{background:var(--yellow)}
+.legend .fold{background:var(--red)}
+.legend .math{background:#8c9aa3}
+.legend .unknown{background:#777}
+.statistics{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:8px}
+.stat{padding:7px;border:1px solid var(--line);border-radius:7px}
+.stat span{display:block;color:var(--muted);font-size:10px}
+.stat b{font-size:16px}
+.observations div{margin-top:5px;color:#dce9e2}
+.leaks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:7px;margin-top:8px}
+.leak{padding:9px;border:1px solid var(--line);border-radius:7px;display:grid;gap:5px}
+.leak span{font-size:12px;color:var(--muted)}
+.leak.flagged{border-color:#d66;background:#3a2020}.leak.flagged b{color:#ff9090}
+summary{cursor:pointer;color:var(--green)}
+@media(max-width:760px){.statistics{grid-template-columns:repeat(3,1fr)}}

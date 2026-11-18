@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对手范围统计</title><link rel="stylesheet" href="opponent-hands.css"></head>
+<body><main>
+<header><div><small>范围分析</small><h1>对手范围统计</h1></div><div class="header-actions"><button id="opponentTopmost">置顶</button><div id="context">等待牌局</div></div></header>
+<section class="notice"><b>展示可能范围，不猜具体底牌</b><span>范围根据位置、动作、下注大小、公共牌和已积累样本更新；正式建议使用同一场景证据。</span></section>
+<nav id="opponentTabs" class="opponent-tabs"></nav><section id="rangeDetail" class="range-detail"><div class="empty">等待识别牌桌和玩家</div></section>
+</main><script src="preflop-participation.js"></script><script src="poker-core.js"></script><script src="v2-model.js"></script><script src="opponent-hands.js"></script></body></html>

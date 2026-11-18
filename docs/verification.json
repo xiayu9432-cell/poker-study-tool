@@ -1,0 +1,8 @@
+{
+  "pythonSyntaxFiles": 37,
+  "javascriptSyntaxFiles": 25,
+  "filesChecked": 90,
+  "failures": [],
+  "unresolvedLocalImports": [],
+  "scope": "Static checks only; no desktop, OCR, solver or clean-environment acceptance."
+}
